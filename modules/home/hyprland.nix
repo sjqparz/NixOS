@@ -22,10 +22,6 @@
     programs.noctalia = {
       enable = true;
       settings = {
-        #plugins = {
-          #enabled = "ashur-d/wallpaper-widget";
-          #auto_update = "all";
-        #};
         theme.templates = {
           enable.builtin_templates = true;
           builtins_ids = [ "hyprland" ];
