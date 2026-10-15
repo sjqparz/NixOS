@@ -137,8 +137,8 @@
       shellAliases = {
         ll = "ls -lah";
         ".." = "cd ..";
-        rebuild  = "sudo nixos-rebuild switch --flake /home/sean/.config/nixos";
-        build    = "sudo nixos-rebuild build --flake /home/sean/.config/nixos";
+        rebuild  = "sudo nixos-rebuild switch --flake /home/sean/nixos#vm";
+        build    = "sudo nixos-rebuild build --flake /home/sean/nixos#vm";
         update   = "sudo nix flake update";
         trashman = "sudo nix-collect-garbage";
       };
