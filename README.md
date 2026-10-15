@@ -1,3 +1,0 @@
-# nixos
-
-NixOS config files
