@@ -1,7 +1,21 @@
 { pkgs, username, inputs, ... }:
+
+let
+  unstable = inputs.nixpkgs-unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+in
+
 {
   # ---------- System level (NixOS) ----------
-  programs.hyprland.enable = true;
+  programs.hyprland = {
+    enable = true;
+    package = unstable.hyprland;
+    portalPackage = unstable.xdg-desktop-portal-hyprland;
+  };
+
+  hardware.graphics = {
+    package = unstable.mesa;
+    package32 = unstable.pkgsi686Linux.mesa;
+  };
 
   programs.dconf.enable = true;
   services.gvfs.enable = true;
@@ -45,7 +59,7 @@
     home.packages = with pkgs; [
       playerctl           # media keys        (XF86Audio*)
       xrandr              # autostart: `xrandr --output HDMI-A-2 --primary`
-      quickshell          # `qs`, needed by the wallpaperCarousel plugin (>= 0.3; 26.05 has 0.3.0)
+      quickshell          
     ];
   };
 }
