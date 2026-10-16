@@ -3,9 +3,12 @@
   # ---------- System level (NixOS) ----------
   programs.hyprland.enable = true;
 
+  programs.dconf.enable = true;
+  services.gvfs.enable = true;
   environment.systemPackages = with pkgs; [
-    #adw-gtk-theme
-    #nwg-look
+    adw-gtk3
+    nwg-look
+    #papirus-icon-theme
   ];
 
   # Pre-built Noctalia binaries, so it isn't compiled locally. Only works while
