@@ -11,12 +11,13 @@
   environment.systemPackages = with pkgs; [
     git
     wget
-    nemo-with-extensions
     btop
     fastfetch
 
+    nemo-with-extensions
+
     vlc
-    ffmpeg-full
+    unstable.ffmpeg-full
     qimgv
     feishin
 
@@ -137,9 +138,9 @@
       shellAliases = {
         ll = "ls -lah";
         ".." = "cd ..";
-        rebuild  = "sudo nixos-rebuild switch --flake /home/sean/nixos#vm";
-        build    = "sudo nixos-rebuild build --flake /home/sean/nixos#vm";
-        update   = "sudo nix flake update";
+        rebuild  = "sudo nixos-rebuild switch --flake /home/${username}/nixos";
+        build    = "sudo nixos-rebuild build --flake /home/${username}/nixos";
+        update   = "nix flake update --flake /home/${username}/nixos";
         trashman = "sudo nix-collect-garbage";
       };
 
