@@ -11,7 +11,8 @@
   environment.systemPackages = with pkgs; [
     git
     wget
-    nautilus
+    #nautilus
+    nemo
     btop
     fastfetch
 
