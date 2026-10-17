@@ -20,15 +20,25 @@
     };
   };
 
-  outputs = { nixpkgs, ... }@inputs:
+  outputs = { nixpkgs, nixpkgs-unstable, ... }@inputs:
     let
       # Defined once; any module can ask for `username` as an argument.
       username = "sean";
+      system = "x86_64-linux";
 
       # Each machine's real configuration lives in hosts/<name>/default.nix
       mkHost = hostname: nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs username hostname; };
-        modules = [ 
+        modules = [
+          { nixpkgs.overlays = [
+            (final: prev: {
+              unstable = import nixpkgs-unstable {
+                system = final.stdenv.hostPlatform.system;
+                config.allowUnfree = true;
+              };
+            })
+          ];
+        } 
           ./modules/system/base.nix
           ./hosts/${hostname}
           { networking.hostName = hostname; }

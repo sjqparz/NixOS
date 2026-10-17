@@ -13,11 +13,12 @@
     wget
     btop
     fastfetch
+    unstable.yazi
 
     nemo-with-extensions
 
     vlc
-    unstable.ffmpeg-full
+    ffmpeg-full
     qimgv
     feishin
 

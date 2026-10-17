@@ -1,20 +1,16 @@
 { pkgs, username, inputs, ... }:
 
-let
-  unstable = inputs.nixpkgs-unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system};
-in
-
 {
   # ---------- System level (NixOS) ----------
   programs.hyprland = {
     enable = true;
-    package = unstable.hyprland;
-    portalPackage = unstable.xdg-desktop-portal-hyprland;
+    package = pkgs.unstable.hyprland;
+    portalPackage = pkgs.unstable.xdg-desktop-portal-hyprland;
   };
 
   hardware.graphics = {
-    package = unstable.mesa;
-    package32 = unstable.pkgsi686Linux.mesa;
+    package = pkgs.unstable.mesa;
+    package32 = pkgs.unstable.pkgsi686Linux.mesa;
   };
 
   programs.dconf.enable = true;
