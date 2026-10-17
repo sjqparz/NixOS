@@ -47,8 +47,8 @@
     in
     {
       nixosConfigurations = {
-        desktop = mkHost "desktop";
-        laptop = mkHost "laptop";
+        quarziale = mkHost "quarziale";
+        framework = mkHost "framework";
         vm = mkHost "vm";
       };
     };
