@@ -17,7 +17,7 @@
     };
 
     noctalia.url = "github:noctalia-dev/noctalia/cachix";
-    serpantinum.url = "github:ilyamiro/serpantinum";
+    #serpantinum.url = "github:ilyamiro/serpantinum";
   };
 
   outputs = { nixpkgs, nixpkgs-unstable, serpantinum, ... }@inputs:
