@@ -5,7 +5,6 @@
 {
   imports = [
     ./hardware.nix
-    ../../modules/system/base.nix
     ../../modules/system/home-manager.nix
     ../../modules/home/plasma.nix
     ../../modules/home/hyprland.nix

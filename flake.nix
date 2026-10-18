@@ -49,7 +49,7 @@
       nixosConfigurations = {
         quarziale = mkHost "quarziale";
         framework = mkHost "framework";
-        vm = mkHost "vm";
+        vm        = mkHost "vm";
       };
     };
 }
