@@ -13,7 +13,6 @@
     wget
     btop
     fastfetch
-    unstable.yazi
 
     nemo-with-extensions
 
@@ -123,7 +122,7 @@
 
       autosuggestion = {
         enable = true;
-        strategy = [ "completion" ];
+        strategy = [ "completion" "history" ];
       };
       syntaxHighlighting.enable = true;
       historySubstringSearch.enable = true;

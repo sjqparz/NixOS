@@ -16,9 +16,8 @@
       inputs.home-manager.follows = "home-manager";
     };
 
-    noctalia = {
-      url = "github:noctalia-dev/noctalia/cachix";
-    };
+    noctalia.url = "github:noctalia-dev/noctalia/cachix";
+    #serpantinum.url = "github:ilyamiro/serpantinum";
   };
 
   outputs = { nixpkgs, nixpkgs-unstable, ... }@inputs:
