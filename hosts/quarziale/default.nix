@@ -8,19 +8,39 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware.nix
-      ../../modules/system/base.nix
       ../../modules/system/home-manager.nix
       ../../modules/home/plasma.nix
-      ../../modules/home/hyprland.nix
+     # ../../modules/home/hyprland.nix
       ../../modules/system/sddm.nix
      # ../../modules/system/gamer.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
+  # Bootloader
+  boot.loader.systemd-boot.enable = false;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.grub = {
+    enable = true;
+    efiSupport = true;
+    device = "nodev";
+    theme = pkgs.sleek-grub-theme.override {
+      withStyle = "dark";
+    };
+    gfxmodeEfi = "1440x2560";
+    extraEntries = ''
+      menuentry "Windows" {
+        insmod part_gpt
+        insmod fat
+        insmod search_fs_uuid
+        insmod chain
+        search --fs-uuid --set=root D04E-B4B1
+        chainloader /EFI/Microsoft/Boot/bootmgfw.efi
+      }
+    '';
+  };
+
+  time.hardwareClockInLocalTime = true;
 
   hardware.graphics = {
     enable = true;
@@ -28,21 +48,17 @@
   };
 
   networking.hostName = "quarziale"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  # networking.wireless.enable = true;
 
   #Enable CUPS to print documents.
   services.printing.enable = true;
 
+  environment.systemPackages = with pkgs; [
+    wget
+    git
+  ];
 
-  # List packages installed in system profile.
-  # You can use https://search.nixos.org/ to find more packages (and options).
-   environment.systemPackages = with pkgs; [
-     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-     wget
-     git
-   ];
-
-   home-manager.users.${username}.wayland.windowManager.hyprland.extraConfig =
+  home-manager.users.${username}.wayland.windowManager.hyprland.extraConfig =
     builtins.readFile ./monitor.lua;
 
   # Some programs need SUID wrappers, can be configured further or are
