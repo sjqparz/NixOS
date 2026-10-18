@@ -1,5 +1,5 @@
 -- noctalia ipc
-local ipc = "noctalia msg "
+-- local ipc = "noctalia msg "
 
 ---------------------
 ---- MY PROGRAMS ----
@@ -20,7 +20,8 @@ local fileManager = "nautilus"
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function () 
-   hl.exec_cmd("noctalia")
+--   hl.exec_cmd("noctalia")
+     h1.exec_cmd("serpantinumd start")
 --   hl.exec_cmd("nm-applet")
 --   hl.exec_cmd("waybar & hyprpaper & firefox")
    hl.exec_cmd("xrandr --output HDMI-A-2 --primary")

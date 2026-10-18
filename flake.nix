@@ -17,16 +17,15 @@
     };
 
     noctalia.url = "github:noctalia-dev/noctalia/cachix";
-    #serpantinum.url = "github:ilyamiro/serpantinum";
+    serpantinum.url = "github:ilyamiro/serpantinum";
   };
 
-  outputs = { nixpkgs, nixpkgs-unstable, ... }@inputs:
+  outputs = { nixpkgs, nixpkgs-unstable, serpantinum, ... }@inputs:
     let
-      # Defined once; any module can ask for `username` as an argument.
+
       username = "sean";
       system = "x86_64-linux";
 
-      # Each machine's real configuration lives in hosts/<name>/default.nix
       mkHost = hostname: nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs username hostname; };
         modules = [
@@ -39,6 +38,7 @@
             })
           ];
         } 
+
           ./modules/system/base.nix
           ./hosts/${hostname}
           { networking.hostName = hostname; }

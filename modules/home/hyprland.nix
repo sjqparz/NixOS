@@ -30,9 +30,9 @@
 
   # ---------- User level (Home Manager) ----------
   home-manager.users.${username} = {
-    imports = [ inputs.noctalia.homeModules.default ];
+    #imports = [ inputs.noctalia.homeModules.default ];
 
-    programs.noctalia = {
+    /* programs.noctalia = {
       enable = true;
       settings = {
         theme.templates = {
@@ -40,7 +40,7 @@
           builtins_ids = [ "hyprland" ];
         };
       };
-    };
+    }; */
 
     wayland.windowManager.hyprland = {
       enable = true;
