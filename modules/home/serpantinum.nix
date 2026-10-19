@@ -1,4 +1,3 @@
-# Serpantinum shell: system prerequisites, Home Manager config, Hyprland binds.
 { inputs, username, ... }:
 
 {
@@ -13,9 +12,9 @@
 
     programs.serpantinum = {
       enable = true;
-      systemd.enable = true;
+      systemd.enable = false;
       settings = {
-        wallpaperDir = "${config.home.homeDirectory}/.config/nixos/modules/home/wallpaper";
+        wallpaperDir = "/home/sean/.config/nixos/modules/home/wallpaper";
         general.language = "en";
         bar = {
           position = "top";
@@ -30,9 +29,6 @@
     };
 
     # Written to ~/.config/hypr/serpantinum.lua and require()'d automatically
-    wayland.windowManager.hyprland.extraLuaFiles.serpantinum = {
-      content = ./serpantinum.lua;
-      autoLoad = true;
-    };
+    wayland.windowManager.hyprland.extraConfig = builtins.readFile ./serpantinum.lua;
   };
 }

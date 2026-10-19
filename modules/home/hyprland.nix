@@ -8,11 +8,6 @@
     portalPackage = pkgs.unstable.xdg-desktop-portal-hyprland;
   };
 
-  hardware.graphics = {
-    package = pkgs.unstable.mesa;
-    package32 = pkgs.unstable.pkgsi686Linux.mesa;
-  };
-
   programs.dconf.enable = true;
   services.gvfs.enable = true;
   environment.systemPackages = with pkgs; [
@@ -32,7 +27,7 @@
   home-manager.users.${username} = {
     #imports = [ inputs.noctalia.homeModules.default ];
 
-     programs.noctalia = {
+    /*  programs.noctalia = {
       enable = true;
       settings = {
         theme.templates = {
@@ -41,7 +36,7 @@
         };
       };
     };
-
+ */
     wayland.windowManager.hyprland = {
       enable = true;
       #Null avoids conflict with programs.hyprland.enable above

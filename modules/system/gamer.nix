@@ -20,22 +20,21 @@
       localNetworkGameTransfers.openFirewall = true;
       gamescopeSession = {
         enable = true;
-        env = {
-          WLR_RENDERER = "vulkan";
-          DXVK_HDR = "1";
+#        env = {
+#          WLR_RENDERER = "vulkan";
+#          DXVK_HDR = "1";
         };
-        args = [
+#        args = [
          #"--xwayland-count 1"
-         "--adaptive-sync"
-         "--hdr-enabled"
+#         "--adaptive-sync"
+#         "--hdr-enabled"
          #"--hdr-debug-force-output"
-        ];
+#        ];
       };
-    };
 
     programs.gamescope = {
       enable     = true;
-      enableWsi  = true;
+      #enableWsi  = true;
     };
 
     programs.gamemode.enable = true;

@@ -14,7 +14,7 @@
     btop
     fastfetch
 
-    nemo-with-extensions
+    #nemo-with-extensions
 
     vlc
     ffmpeg-full

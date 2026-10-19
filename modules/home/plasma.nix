@@ -32,7 +32,7 @@
           location = "bottom";
           height = 52;
           floating = true;
-          hiding = "windowsgobelow";
+          hiding = "autohide";
           alignment = "center";
           lengthMode = "fit";
         }
