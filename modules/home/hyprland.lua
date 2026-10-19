@@ -20,8 +20,8 @@ local fileManager = "nemo"
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function () 
---   hl.exec_cmd("noctalia")
-     hl.exec_cmd("serpantinumd start")
+   hl.exec_cmd("noctalia")
+--   hl.exec_cmd("serpantinumd start")
 --   hl.exec_cmd("nm-applet")
 --   hl.exec_cmd("waybar & hyprpaper & firefox")
    hl.exec_cmd("xrandr --output HDMI-A-2 --primary")
@@ -248,6 +248,11 @@ hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
 hl.bind(mainMod .. " + B", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 
+--NOCTALIA APP LAUNCHER--
+hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("noctalia msg panel-toggle launcher"))
+hl.bind(mainMod .. " + Z",     hl.dsp.exec_cmd("noctalia msg panel-toggle control-center"))
+hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("nnoctalia msg panel-toggle ashur-d/wallpaper-widget:hub"))
+
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
@@ -260,12 +265,6 @@ hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.resize({ x = resizeUnit, y 
 hl.bind(mainMod .. " + SHIFT + left", hl.dsp.window.resize({ x = -resizeUnit, y = 0, relative=true }), { repeating = true })
 hl.bind(mainMod .. " + SHIFT + up", hl.dsp.window.resize({ x = 0, y = -resizeUnit, relative=true }), { repeating = true })
 hl.bind(mainMod .. " + SHIFT + down", hl.dsp.window.resize({ x = 0, y = resizeUnit, relative=true }), { repeating = true })
-
--- Wallpaper Carousel (Noctalia plugin yngwe/wallpaperCarousel)
-local carousel = ipc .. "plugin yngwe/wallpaperCarousel:service all "
-hl.bind(mainMod .. " + P",            hl.dsp.exec_cmd(carousel .. "toggle"))
-hl.bind(mainMod .. " + CTRL + right", hl.dsp.exec_cmd(carousel .. "next"))
-hl.bind(mainMod .. " + CTRL + left",  hl.dsp.exec_cmd(carousel .. "prev"))
 
 for i = 1, 10 do
     local key = i % 10 -- 10 maps to key 0

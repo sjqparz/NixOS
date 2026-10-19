@@ -1,5 +1,9 @@
-{ inputs, username, ... }:
+{ pkgs, inputs, username, ... }:
 {  
+  
+  environment.systemPackages = [
+    inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+  ];
   
   # Pre-built Noctalia binaries, so it isn't compiled locally. Only works while
   # the noctalia flake input does NOT use `inputs.nixpkgs.follows`.
