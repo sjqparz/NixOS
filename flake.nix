@@ -20,7 +20,7 @@
     serpantinum.url = "github:ilyamiro/serpantinum";
     caelestia-shell = {
       url = "github:caelestia-dots/shell";
-      inputs.nixpkgs.follows = "nixpkgs-unstable"
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
   };
 
