@@ -1,3 +1,5 @@
+-- Read by hyprland.lua for serpentinum specific settings
+
 local function shell(cmd)
   return hl.dsp.exec_cmd("serpantinum " .. cmd)
 end
