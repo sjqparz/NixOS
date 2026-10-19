@@ -13,6 +13,30 @@
       ../../modules/system/gamer.nix
     ];
 
+  environment.systemPackages = with pkgs; [
+    alsa-utils
+    cifs-utils
+
+    sleek-grub-theme
+    obsidian
+    nemo
+    yazi #tui file manager
+
+    
+    #davinci-resolve
+    #zoom-us
+    #proton-vpn
+    #orca-slicer
+  ];
+
+  fileSystems."/mnt/truenas/obsidian" = {
+    device = "smb://42.0.69.27/obsidian";
+    fsType = "cifs";
+    options = let 
+      automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
+    in ["${automount_opts},credentials=/home/sean/.smb/truenas-smb-creds,uid=1000,gid=1000"];
+  };
+
   # Bootloader
   boot.loader.systemd-boot.enable = false;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -49,20 +73,6 @@
 
   hardware.alsa.enablePersistence = true;
 
-  environment.systemPackages = with pkgs; [
-    alsa-utils
-
-    sleek-grub-theme
-    obsidian
-    nemo
-    yazi #tui file manager
-
-    
-    #davinci-resolve
-    #zoom-us
-    #proton-vpn
-    #orca-slicer
-  ];
 home-manager.users.${username}.wayland.windowManager.hyprland.extraConfig =
     builtins.readFile ./monitor.lua;
 
