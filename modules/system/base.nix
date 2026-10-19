@@ -14,8 +14,7 @@
     btop
     fastfetch
 
-    #nemo-with-extensions
-
+    pavucontrol
     vlc
     ffmpeg-full
     qimgv

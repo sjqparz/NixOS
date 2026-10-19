@@ -21,7 +21,6 @@ local fileManager = "nemo"
 --
 hl.on("hyprland.start", function () 
 --   hl.exec_cmd("noctalia")
---  #Autostart for serpantinum
      hl.exec_cmd("serpantinumd start")
 --   hl.exec_cmd("nm-applet")
 --   hl.exec_cmd("waybar & hyprpaper & firefox")
