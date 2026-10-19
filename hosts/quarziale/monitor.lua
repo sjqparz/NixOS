@@ -1,7 +1,3 @@
--- Desktop monitors (hosts/desktop/monitors.lua).
--- Loaded through wayland.windowManager.hyprland.extraLuaFiles in hosts/desktop/default.nix.
--- See https://wiki.hypr.land/Configuring/Basics/Monitors/
-
 hl.monitor({
     output   = "HDMI-A-2",
     mode     = "3840x2160@120",

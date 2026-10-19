@@ -8,6 +8,11 @@
     portalPackage = pkgs.unstable.xdg-desktop-portal-hyprland;
   };
 
+  hardware.graphics = {
+    package = pkgs.unstable.mesa;
+    package32 = pkgs.unstable.pkgsi686Linux.mesa;
+  };
+
   programs.dconf.enable = true;
   services.gvfs.enable = true;
   environment.systemPackages = with pkgs; [
@@ -18,10 +23,10 @@
 
   # Pre-built Noctalia binaries, so it isn't compiled locally. Only works while
   # the noctalia flake input does NOT use `inputs.nixpkgs.follows`.
-  nix.settings = {
+  /* nix.settings = {
     extra-substituters = [ "https://noctalia.cachix.org" ];
     extra-trusted-public-keys = [ "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4=" ];
-  };
+  }; */
 
   # ---------- User level (Home Manager) ----------
   home-manager.users.${username} = {

@@ -4,11 +4,12 @@
   imports =
     [
       ./hardware.nix
+      ../../modules/system/base.nix
       ../../modules/system/home-manager.nix
       ../../modules/system/sddm.nix
       ../../modules/home/plasma.nix
-      ../../modules/home/hyprland.nix
-      ../../modules/home/serpantinum.nix
+   #   ../../modules/home/hyprland.nix
+   #   ../../modules/home/serpantinum.nix
    #  ../../modules/system/gamer.nix
     ];
 
@@ -42,8 +43,6 @@
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
-    package = pkgs.unstable.mesa;
-    package32 = pkgs.unstable.pkgsi686Linux.mesa;
   };
 
   networking.hostName = "quarziale";

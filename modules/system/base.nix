@@ -138,9 +138,9 @@
       shellAliases = {
         ll = "ls -lah";
         ".." = "cd ..";
-        rebuild  = "sudo nixos-rebuild switch --flake /home/${username}/nixos";
-        build    = "sudo nixos-rebuild build --flake /home/${username}/nixos";
-        update   = "nix flake update --flake /home/${username}/nixos";
+        rebuild  = "sudo nixos-rebuild switch --flake /home/${username}/.config/nixos";
+        build    = "sudo nixos-rebuild build --flake /home/${username}/.config/nixos";
+        update   = "nix flake update --flake /home/${username}/.config/nixos";
         trashman = "sudo nix-collect-garbage --delete-older-than-10d";
       };
 
