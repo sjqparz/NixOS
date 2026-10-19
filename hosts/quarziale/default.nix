@@ -10,7 +10,7 @@
       ../../modules/home/plasma.nix
       ../../modules/home/hyprland.nix
       ../../modules/home/serpantinum.nix
-   #  ../../modules/system/gamer.nix
+     ../../modules/system/gamer.nix
     ];
 
   #nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -56,6 +56,7 @@
     git
     sleek-grub-theme
     obsidian
+    nemo
     #yazi #tui file manager
     
     #davinci-resolve

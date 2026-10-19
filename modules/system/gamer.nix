@@ -16,13 +16,12 @@
     programs.steam = {
       enable = true;
       remotePlay.openFirewall = true;
-      gamescopeSession.enable = true;
       localNetworkGameTransfers.openFirewall = true;
       gamescopeSession = {
         enable = true;
-#        env = {
-#          WLR_RENDERER = "vulkan";
-#          DXVK_HDR = "1";
+        env = {
+          WLR_RENDERER = "vulkan";
+          DXVK_HDR = "1";
         };
 #        args = [
          #"--xwayland-count 1"
@@ -31,6 +30,7 @@
          #"--hdr-debug-force-output"
 #        ];
       };
+    };
 
     programs.gamescope = {
       enable     = true;
