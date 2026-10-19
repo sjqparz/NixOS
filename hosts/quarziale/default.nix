@@ -9,7 +9,7 @@
       ../../modules/system/sddm.nix
       ../../modules/home/plasma.nix
       ../../modules/home/hyprland.nix
-   #   ../../modules/home/serpantinum.nix
+      ../../modules/home/serpantinum.nix
    #  ../../modules/system/gamer.nix
     ];
 
