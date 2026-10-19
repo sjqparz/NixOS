@@ -36,9 +36,7 @@
                 config.allowUnfree = true;
               };
             })
-          ];
-        } 
-
+         ];} 
           ./modules/system/base.nix
           ./hosts/${hostname}
           { networking.hostName = hostname; }

@@ -13,21 +13,14 @@
   environment.systemPackages = with pkgs; [
     adw-gtk3
     nwg-look
-    #papirus-icon-theme
+    papirus-icon-theme
   ];
-
-  # Pre-built Noctalia binaries, so it isn't compiled locally. Only works while
-  # the noctalia flake input does NOT use `inputs.nixpkgs.follows`.
-  /* nix.settings = {
-    extra-substituters = [ "https://noctalia.cachix.org" ];
-    extra-trusted-public-keys = [ "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4=" ];
-  }; */
 
   # ---------- User level (Home Manager) ----------
   home-manager.users.${username} = {
     #imports = [ inputs.noctalia.homeModules.default ];
 
-    /*  programs.noctalia = {
+     /* programs.noctalia = {
       enable = true;
       settings = {
         theme.templates = {
@@ -35,8 +28,8 @@
           builtins_ids = [ "hyprland" ];
         };
       };
-    };
- */
+    }; */
+
     wayland.windowManager.hyprland = {
       enable = true;
       #Null avoids conflict with programs.hyprland.enable above

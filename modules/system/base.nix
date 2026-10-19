@@ -15,6 +15,7 @@
     fastfetch
 
     pavucontrol
+    pulseaudio
     vlc
     ffmpeg-full
     qimgv

@@ -4,7 +4,6 @@
   imports =
     [
       ./hardware.nix
-      ../../modules/system/base.nix
       ../../modules/system/home-manager.nix
       ../../modules/system/sddm.nix
       ../../modules/home/plasma.nix
@@ -12,8 +11,6 @@
       ../../modules/home/serpantinum.nix
      ../../modules/system/gamer.nix
     ];
-
-  #nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Bootloader
   boot.loader.systemd-boot.enable = false;
@@ -25,7 +22,6 @@
     theme = pkgs.sleek-grub-theme.override {
       withStyle = "dark";
     };
-
     extraEntries = ''
       menuentry "Windows" {
         insmod part_gpt
@@ -48,16 +44,18 @@
   networking.hostName = "quarziale";
   # networking.wireless.enable = true;
 
-  #Enable CUPS to print documents.
   services.printing.enable = true;
 
+  hardware.alsa.enablePersistence = true;
+
   environment.systemPackages = with pkgs; [
-    wget
-    git
+    alsa-utils
+
     sleek-grub-theme
     obsidian
     nemo
-    #yazi #tui file manager
+    yazi #tui file manager
+
     
     #davinci-resolve
     #zoom-us
