@@ -8,11 +8,6 @@
     portalPackage = pkgs.unstable.xdg-desktop-portal-hyprland;
   };
 
-  hardware.graphics = {
-    package = pkgs.unstable.mesa;
-    package32 = pkgs.unstable.pkgsi686Linux.mesa;
-  };
-
   programs.dconf.enable = true;
   services.gvfs.enable = true;
   environment.systemPackages = with pkgs; [

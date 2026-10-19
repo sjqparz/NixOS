@@ -8,7 +8,7 @@
       ../../modules/system/home-manager.nix
       ../../modules/system/sddm.nix
       ../../modules/home/plasma.nix
-   #   ../../modules/home/hyprland.nix
+      ../../modules/home/hyprland.nix
    #   ../../modules/home/serpantinum.nix
    #  ../../modules/system/gamer.nix
     ];
@@ -54,9 +54,16 @@
   environment.systemPackages = with pkgs; [
     wget
     git
+    sleek-grub-theme
+    obsidian
+    #yazi #tui file manager
+    
+    #davinci-resolve
+    #zoom-us
+    #proton-vpn
+    #orca-slicer
   ];
-
-  home-manager.users.${username}.wayland.windowManager.hyprland.extraConfig =
+home-manager.users.${username}.wayland.windowManager.hyprland.extraConfig =
     builtins.readFile ./monitor.lua;
 
 system.stateVersion = "26.05"; 
