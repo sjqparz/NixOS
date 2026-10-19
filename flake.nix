@@ -18,9 +18,13 @@
 
     noctalia.url = "github:noctalia-dev/noctalia/cachix";
     serpantinum.url = "github:ilyamiro/serpantinum";
+    caelestia-shell = {
+      url = "github:caelestia-dots/shell";
+      inputs.nixpkgs.follows = "nixpkgs-unstable"
+    };
   };
 
-  outputs = { nixpkgs, nixpkgs-unstable, serpantinum, ... }@inputs:
+  outputs = { nixpkgs, nixpkgs-unstable, ... }@inputs:
     let
 
       username = "sean";

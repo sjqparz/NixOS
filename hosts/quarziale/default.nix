@@ -5,11 +5,12 @@
     [
       ./hardware.nix
       ../../modules/system/home-manager.nix
-      ../../modules/system/sddm.nix
+      #../../modules/system/sddm.nix
       ../../modules/home/plasma.nix
       ../../modules/home/hyprland.nix
       ../../modules/home/noctalia.nix
       #../../modules/home/serpantinum.nix
+      #../../modules/home/caelestia.nix
       ../../modules/system/gamer.nix
     ];
 
@@ -23,10 +24,10 @@
     yazi #tui file manager
 
     
-    #davinci-resolve
-    #zoom-us
-    #proton-vpn
-    #orca-slicer
+    davinci-resolve
+    zoom-us
+    proton-vpn
+    orca-slicer
   ];
 
   fileSystems."/mnt/truenas/obsidian" = {
@@ -67,7 +68,7 @@
   };
 
   networking.hostName = "quarziale";
-  # networking.wireless.enable = true;
+  #networking.wireless.enable = true;
 
   services.printing.enable = true;
 
