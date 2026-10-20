@@ -21,10 +21,10 @@ local fileManager = "nemo"
 --
 hl.on("hyprland.start", function () 
    hl.exec_cmd("noctalia")
+--   hl.exec_cmd("dms run")   
 --   hl.exec_cmd("serpantinumd start")
 --   hl.exec_cmd("caelestia shell -d")
---   hl.exec_cmd("nm-applet")
---   hl.exec_cmd("waybar & hyprpaper & firefox")
+
    hl.exec_cmd("xrandr --output HDMI-A-2 --primary")
    hl.exec_cmd("hyprctl setcursor Bibata-Modern-Ice 24")
 end)
