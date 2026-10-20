@@ -2,9 +2,9 @@
 
 let
   astronaut = pkgs.sddm-astronaut.override {
-    embeddedTheme = "japanese_aesthetic";
+    embeddedTheme = "post-apocalyptic_hacker";
     themeConfig = {
-      Background = "${./grid2.jpeg}";
+      HideSystemButtons = "false";
     };
   };
 in
@@ -20,7 +20,6 @@ in
   };
 
   services.xserver.enable = true;
-
   services.xserver.displayManager.setupCommands = ''
     ${pkgs.xrandr}/bin/xrandr --output HDMI-A-1 --off --output HDMI-A-2 --auto --primary
   '';
