@@ -32,6 +32,7 @@
   # Enable networking
   networking.networkmanager.enable = true;
   networking.firewall.enable = true;
+  security.pki.certificateFiles = [ ../../caddy-root.crt ];
   
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;

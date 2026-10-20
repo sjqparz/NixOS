@@ -1,4 +1,4 @@
-{ pkgs, inputs, username, ... }:
+{ pkgs, inputs, ... }:
 {
 
   programs.dank-material-shell = {
