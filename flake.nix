@@ -60,6 +60,4 @@
       };
     };
 
-  security.pki.certificateFiles = [ /home/sean/.cert/caddy-root.crt ];
-
 }
