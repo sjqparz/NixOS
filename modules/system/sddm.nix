@@ -9,11 +9,21 @@ let
   };
 in
 {
+  services.xserver.displayManager.setupCommands = ''
+    ${pkgs.xorg.xrandr}/bin/xrandr \
+      --output HDMI-A-2 --primary --auto \
+      --output HDMI-A-1 --off
+  '';
+
   services.displayManager.sddm = {
     enable = true;
     theme = "sddm-astronaut-theme";
-    extraPackages = [ astronaut ];
+    extraPackages = with pkgs; [ 
+      astronaut
+      kdePackages.qtmultimedia #Required for video 
+    ];
   };
 
-  environment.systemPackages = [ astronaut ];
+   environment.systemPackages = [ astronaut ];
 }
+

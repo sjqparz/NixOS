@@ -5,7 +5,7 @@
     [
       ./hardware.nix
       ../../modules/system/home-manager.nix
-      #../../modules/system/sddm.nix
+      ../../modules/system/sddm.nix
       ../../modules/home/plasma.nix
       ../../modules/home/hyprland.nix
       ../../modules/home/noctalia.nix

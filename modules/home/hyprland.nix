@@ -6,6 +6,7 @@
     enable = true;
     package = pkgs.unstable.hyprland;
     portalPackage = pkgs.unstable.xdg-desktop-portal-hyprland;
+    withUWSM = false;
   };
 
   programs.dconf.enable = true;
@@ -18,17 +19,6 @@
 
   # ---------- User level (Home Manager) ----------
   home-manager.users.${username} = {
-    #imports = [ inputs.noctalia.homeModules.default ];
-
-     /* programs.noctalia = {
-      enable = true;
-      settings = {
-        theme.templates = {
-          enable.builtin_templates = true;
-          builtins_ids = [ "hyprland" ];
-        };
-      };
-    }; */
 
     wayland.windowManager.hyprland = {
       enable = true;
