@@ -253,7 +253,7 @@ hl.bind(mainMod .. " + P",          hl.dsp.exec_cmd("noctalia msg panel-toggle a
 
 --DMS--
 hl.bind(mainMod .. " + SPACE",     hl.dsp.exec_cmd("dms ipc call spotlight toggle"))
-hl.bind(mainMod .. " + P",         hl.dsp.exec_cmd("dms ipc call control-center toggle"))
+hl.bind(mainMod .. " + Z",         hl.dsp.exec_cmd("dms ipc call control-center toggle"))
 hl.bind(mainMod .. " + P",         hl.dsp.exec_cmd("dms ipc wallpaperCarousel toggle"))
 
 -- Move focus with mainMod + arrow keys
