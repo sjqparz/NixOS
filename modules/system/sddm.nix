@@ -2,10 +2,7 @@
 
 let
   astronaut = pkgs.sddm-astronaut.override {
-    embeddedTheme = "post-apocalyptic_hacker";
-    themeConfig = {
-      HideSystemButtons = "false";
-    };
+    embeddedTheme = "purple_leaves";
   };
 in
 {

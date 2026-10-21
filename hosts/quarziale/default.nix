@@ -8,7 +8,8 @@
       ../../modules/system/sddm.nix
       ../../modules/home/plasma.nix
       ../../modules/home/hyprland.nix
-      ../../modules/home/noctalia.nix
+      #../../modules/home/noctalia.nix
+      ../../modules/home/dms.nix
       #../../modules/home/serpantinum.nix
       #../../modules/home/caelestia.nix
       ../../modules/system/gamer.nix
