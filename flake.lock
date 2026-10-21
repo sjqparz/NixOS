@@ -34,11 +34,11 @@
         "quickshell": "quickshell"
       },
       "locked": {
-        "lastModified": 1792507819,
-        "narHash": "sha256-7ZdS2iVqBoXrVqDNIQYwhiZEpr+bemPfVqtYfWZQPUg=",
+        "lastModified": 1792598879,
+        "narHash": "sha256-i/IT+aKwGw2u5aOAoYnx/LHz33//quPJgE5jjmMasvM=",
         "owner": "caelestia-dots",
         "repo": "shell",
-        "rev": "6c70d5cb0cbf31413d300699540c858ad28c1539",
+        "rev": "29fcf69a3b66e98458f00e90817d5d5331bf6666",
         "type": "github"
       },
       "original": {
@@ -211,11 +211,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1792545098,
-        "narHash": "sha256-Lwn33HocHS15v8ymkwUFh5Y+OGOq7jdkESkPlRgalsk=",
+        "lastModified": 1792612254,
+        "narHash": "sha256-iHZAQSne7NdwORwIkOsrawhQC7IbQ7drAX8vb8w86Es=",
         "owner": "noctalia-dev",
         "repo": "noctalia",
-        "rev": "0c192f8ff162f9273b2abbce6a12403e1428811e",
+        "rev": "c7ad3cae733c32fcc9c2d65b32501117779e945f",
         "type": "github"
       },
       "original": {
@@ -287,11 +287,11 @@
         "serpantinum-wallpapers": "serpantinum-wallpapers"
       },
       "locked": {
-        "lastModified": 1792524196,
-        "narHash": "sha256-VI38zgCE//tvH6eIbOthNmHSsY/OwSuG8ThN+amPvd0=",
+        "lastModified": 1792613964,
+        "narHash": "sha256-F75il95I49Oq9m+BOqr6CV0uBRX4zjlzhf3uj4Whswo=",
         "owner": "ilyamiro",
         "repo": "serpantinum",
-        "rev": "af1a3ac0bce9bc4e1d1c737d4df8a84bd183433c",
+        "rev": "82ed841cc5a3660ea83f63c342075516d6972abb",
         "type": "github"
       },
       "original": {

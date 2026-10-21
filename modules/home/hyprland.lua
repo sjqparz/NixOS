@@ -12,7 +12,6 @@ hl.on("hyprland.start", function ()
 --   hl.exec_cmd("noctalia")
    hl.exec_cmd("dms run")   
 --   hl.exec_cmd("serpantinumd start")
---   hl.exec_cmd("caelestia shell -d")
 
    hl.exec_cmd("xrandr --output HDMI-A-2 --primary")
    hl.exec_cmd("hyprctl setcursor Bibata-Modern-Ice 24")
@@ -39,7 +38,7 @@ hl.env("HYPRCURSOR_SIZE", "24")
 
 hl.env("QT_QPA_PLATFORM", "wayland")
 hl.env("QT_STYLE_OVERRIDE", "kvantum")
-hl.env("QT_QPA_PLATFORMTHEME", "qt5ct")
+hl.env("QT_QPA_PLATFORMTHEME", "qtengine")
 
 -----------------------
 ---- LOOK AND FEEL ----

@@ -14,6 +14,7 @@
   environment.systemPackages = with pkgs; [
     adw-gtk3
     nwg-look
+    qtengine
     papirus-icon-theme
   ];
 

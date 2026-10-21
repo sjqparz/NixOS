@@ -1,6 +1,6 @@
 { pkgs, inputs, username, ... }:
 {
-
+  
   home-manager.users.${username} = {
     imports = [ inputs.dms.homeModules.dank-material-shell ];
 

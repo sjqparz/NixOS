@@ -1,5 +1,4 @@
-# Wires Home Manager and plasma-manager into the system. It does not say what each user gets; each host's default.nix does that.
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 {
   imports = [ inputs.home-manager.nixosModules.home-manager ];
 

@@ -1,5 +1,5 @@
 # Settings shared by every machine: system-level (NixOS) and user-level (Home Manager).
-{ pkgs, username, ... }:
+{ config, pkgs, username, ... }:
 {
   # ---------- System level (NixOS) ----------
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -20,6 +20,7 @@
     ffmpeg-full
     qimgv
     feishin
+    pywalfox-native
 
     remmina
     libreoffice
@@ -100,19 +101,51 @@
           installation_mode = "force_installed";
           updates_disabled  = true;
         };
+
+        "pywalfox@frewacom.org" = {
+          install_url       = moz "pywalfox";
+          installation_mode = "force_installed";
+          updates_disabled  = true;
+        };
       };
     };
   };
 
-
   # ---------- User level (Home Manager) ----------
-  home-manager.users.${username} = { pkgs, ... }: {
+  home-manager.users.${username} = { config, pkgs, ... }: {
     home.stateVersion = "26.05";
+
+    home.pointerCursor = {
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Modern-Ice";
+      size = 24;
+      gtk.enable = true;
+      x11.enable = true;
+    };
+
+    gtk = {
+      enable = true;
+      iconTheme = {
+        package = pkgs.papirus-icon-theme;
+        name = "Papirus-Dark";
+      };
+    };
+    
+    #Pywalfox DMS integration
+    home.file.".cache/wal/colors.json" = {
+      source = config.lib.file.mkOutOfStoreSymlink
+        "${config.home.homeDirectory}/.cache/wal/dank-pywalfox.json";
+      force = true;
+    };
 
     #TERMINAL---------------------------------------
     programs.kitty = {
       enable = true;
       settings.background_opacity = "0.90";
+      extraConfig = ''
+        include dank-tabs.conf
+        include dank-theme.conf
+      '';
     };
 
     programs.zsh = {
@@ -161,9 +194,10 @@
       profiles.default = {
         extensions = with pkgs.vscode-extensions; [
           jeff-hykin.better-nix-syntax
+          #danklinux.dms-theme
         ];
         userSettings = {
-          "workbench.colorTheme" = "Monokai Dimmed";
+          "workbench.colorTheme" = "Dynamic Base16 DankShell";
         };
       };
     };
