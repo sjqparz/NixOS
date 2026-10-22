@@ -1,40 +1,36 @@
-{ pkgs, config, lib, ... }:
+{ pkgs, inputs, ... }:
 
-/* let
+let
+
   astronaut = pkgs.sddm-astronaut.override {
     embeddedTheme = "purple_leaves";
   };
-in */
 
+in 
 {
+
   services.displayManager = {
     sddm = {
       enable = true;
-      wayland.enable = true;
-      /* theme = "sddm-astronaut-theme";
+      wayland.enable = false;
+      theme = "sddm-astronaut-theme";
       extraPackages = with pkgs; [ 
         astronaut
-      ]; */
+      ]; 
     };
 
-    /* autoLogin = {
+    autoLogin = {
       enable = true;
       user = "sean";
-    }; */
-  };
+    };
 
-  programs.qylock = {
-      enable = true;
-      theme = "pixel-night-city";
+    defaultSession = "hyprland";
   };
 
   services.xserver.enable = true;
   services.xserver.displayManager.setupCommands = ''
     ${pkgs.xrandr}/bin/xrandr --output HDMI-A-1 --off --output HDMI-A-2 --auto --primary
-  '';
+  ''; 
 
-  services.displayManager.defaultSession = "hyprland";
-
-  #environment.systemPackages = [ astronaut ];
+  environment.systemPackages = [ astronaut ];
 }
-
