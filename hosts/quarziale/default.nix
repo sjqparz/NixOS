@@ -68,7 +68,6 @@
   };
 
   networking.hostName = "quarziale";
-  #networking.wireless.enable = true;
 
   services.printing.enable = true;
 

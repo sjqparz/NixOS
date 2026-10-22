@@ -19,14 +19,14 @@
     #----------------SHELLS----------------#
     noctalia.url = "github:noctalia-dev/noctalia/cachix";
     serpantinum.url = "github:ilyamiro/serpantinum";
-    caelestia-shell = {
-      url = "github:caelestia-dots/shell";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
-    };
+
     dms = {
       url = "github:duxlabs-dev/dux-shell/stable";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+     # inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+
+    qylock.url = "github:Darkkal44/qylock";
+
   };
 
   outputs = { nixpkgs, nixpkgs-unstable, ... }@inputs:
