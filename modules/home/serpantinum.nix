@@ -35,12 +35,12 @@
         hl.exec_cmd("serpantinumd start")
       end)
 
-      hl.bind("SUPER + SPACE",     hl.dsp.exec_cmd("msg toggle launcher"))
-      hl.bind("SUPER + V",         hl.dsp.exec_cmd("msg toggle clipboard"))
-      hl.bind("SUPER + L",         hl.dsp.exec_cmd("lock"))
-      hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("screenshot"))
-      hl.bind("SUPER + SHIFT + R", hl.dsp.exec_cmd("reload"))
-      hl.bind("SUPER + P",         hl.dsp.exec_cmd("msg toggle wallpaper"))
+      hl.bind("SUPER + SPACE",     hl.dsp.exec_cmd("serpantinum msg toggle launcher"))
+      hl.bind("SUPER + V",         hl.dsp.exec_cmd("serpantinum msg toggle clipboard"))
+      hl.bind("SUPER + L",         hl.dsp.exec_cmd("serpantinum lock"))
+      hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("serpantinum screenshot"))
+      hl.bind("SUPER + SHIFT + R", hl.dsp.exec_cmd("serpantinum reload"))
+      hl.bind("SUPER + P",         hl.dsp.exec_cmd("serpantinum msg toggle wallpaper"))
     '';
 
   };
