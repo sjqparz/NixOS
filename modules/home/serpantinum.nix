@@ -16,19 +16,18 @@
       settings = {
         wallpaperDir = "/home/sean/.config/nixos/modules/home/wallpaper";
         general.language = "en";
-        bar = {
+        /* bar = {
           position = "top";
           modules = {
             left = [ "workspaces" ];
             center = [ "time" ];
             right = [ "tray" [ "kb" "wifi" "bt" "vol" "bat" ] ];
-          };
+          }; */
         };
-        theme.fontFamily = "Adwaita Mono";
+        theme.fontFamily = "JetBrainsMono Nerd Font";
       };
-    };
-
-    wayland.windowManager.hyprland.extraConfig = ''
+      
+      wayland.windowManager.hyprland.extraConfig = ''
       hl.on("hyprland.start", function()
         hl.exec_cmd("wl-paste --type text --watch cliphist store")
         hl.exec_cmd("wl-paste --type image --watch cliphist store")
@@ -44,5 +43,6 @@
       hl.bind("SUPER + P",         hl.dsp.exec_cmd("msg toggle wallpaper"))
     '';
 
+    };
   };
 }
