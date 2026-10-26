@@ -6,13 +6,16 @@
       ./hardware.nix
       ../../modules/system/home-manager.nix
       ../../modules/system/sddm.nix
-      #../../modules/home/plasma.nix
+      ../../modules/home/plasma.nix
       ../../modules/home/hyprland.nix
       #../../modules/home/noctalia.nix
-      ../../modules/home/dms.nix
-      #../../modules/home/serpantinum.nix
+      #../../modules/home/dms.nix
+      ../../modules/home/serpantinum.nix
       ../../modules/system/gamer.nix
     ];
+
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   environment.systemPackages = with pkgs; [
     alsa-utils
@@ -34,17 +37,6 @@
   };
 
   services.fwupd.enable = true;
-
-  # Bootloader.
-  boot.loader.grub = {
-    enable = true;
-    device = "/dev/sda";
-    useOSProber = true;
-    theme = pkgs.sleek-grub-theme.override {
-      withStyle = "dark";
-    };
-    #gfxmodeEfi = "1440x2560";
-  };
 
   time.hardwareClockInLocalTime = true;
 
