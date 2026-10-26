@@ -6,12 +6,12 @@
       ./hardware.nix
       ../../modules/system/home-manager.nix
       ../../modules/system/sddm.nix
-      ../../modules/home/plasma.nix
+      #../../modules/home/plasma.nix
       ../../modules/home/hyprland.nix
       #../../modules/home/noctalia.nix
       #../../modules/home/dms.nix
       ../../modules/home/serpantinum.nix
-      ../../modules/system/gamer.nix
+      #../../modules/system/gamer.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
