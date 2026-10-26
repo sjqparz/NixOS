@@ -206,11 +206,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1792640328,
-        "narHash": "sha256-SIu7sSiEqM6ugCUqfnuAMZco4YckUVe3lY+BGweBKwU=",
+        "lastModified": 1792693969,
+        "narHash": "sha256-KRYttKrrb14cNw0OxoZCdfrV41t/v1Uvq+Q/Pv0sT6s=",
         "owner": "noctalia-dev",
         "repo": "noctalia",
-        "rev": "555324c49d760cb302fb32313c28c2038c037b5f",
+        "rev": "548863d24444c1ccdf3e60e17c262b038c962170",
         "type": "github"
       },
       "original": {
@@ -281,11 +281,11 @@
         "serpantinum-wallpapers": "serpantinum-wallpapers"
       },
       "locked": {
-        "lastModified": 1792624660,
-        "narHash": "sha256-At1OdkZ3iAPtOD6lWEAfCgCqa+ZIfOXDNCZTGnheo7U=",
+        "lastModified": 1792695697,
+        "narHash": "sha256-XzCoghZ102E5ImMJUV8FWqOQdy/S84fecPudmMCLRRw=",
         "owner": "ilyamiro",
         "repo": "serpantinum",
-        "rev": "afe1b1837bb3f234b13de9d01d995799273e099a",
+        "rev": "ee48064ce3cd55f476d354f51e0d927d66926261",
         "type": "github"
       },
       "original": {

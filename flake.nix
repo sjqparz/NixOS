@@ -25,8 +25,6 @@
      # inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
-    qylock.url = "github:Darkkal44/qylock";
-
   };
 
   outputs = { nixpkgs, nixpkgs-unstable, ... }@inputs:
