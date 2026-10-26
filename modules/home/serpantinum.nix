@@ -28,7 +28,21 @@
       };
     };
 
-    # Written to ~/.config/hypr/serpantinum.lua and require()'d automatically
-    wayland.windowManager.hyprland.extraConfig = builtins.readFile ./serpantinum.lua;
+    wayland.windowManager.hyprland.extraConfig = ''
+      hl.on("hyprland.start", function()
+        hl.exec_cmd("wl-paste --type text --watch cliphist store")
+        hl.exec_cmd("wl-paste --type image --watch cliphist store")
+        hl.exec_cmd("systemctl --user enable --now easyeffects")
+        hl.exec_cmd("serpantinumd start")
+      end)
+
+      hl.bind("SUPER + SPACE",     hl.dsp.exec_cmd("msg toggle launcher"))
+      hl.bind("SUPER + V",         hl.dsp.exec_cmd("msg toggle clipboard"))
+      hl.bind("SUPER + L",         hl.dsp.exec_cmd("lock"))
+      hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("screenshot"))
+      hl.bind("SUPER + SHIFT + R", hl.dsp.exec_cmd("reload"))
+      hl.bind("SUPER + P",         hl.dsp.exec_cmd("msg toggle wallpaper"))
+    '';
+
   };
 }

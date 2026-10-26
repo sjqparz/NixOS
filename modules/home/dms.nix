@@ -16,6 +16,19 @@
       enableDynamicTheming = true;
       enableAudioWavelength = true;
     };
+
+    wayland.windowManager.hyprland.extraConfig = ''
+      local ipc = "dms ipc call "
+
+      hl.on("hyprland.start", function()
+        hl.exec_cmd("dms run")
+      end)
+
+      hl.bind(mainMod .. " + SPACE",     hl.dsp.exec_cmd("dms ipc call spotlight toggle"))
+      hl.bind(mainMod .. " + Z",         hl.dsp.exec_cmd("dms ipc call control-center toggle"))
+      hl.bind(mainMod .. " + P",         hl.dsp.exec_cmd("dms ipc wallpaperCarousel toggle"))
+    '';
+
   };
 
 }

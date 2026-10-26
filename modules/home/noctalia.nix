@@ -27,6 +27,19 @@
         };
       };
     };
+
+    wayland.windowManager.hyprland.extraConfig = ''
+      local ipc = "noctalia msg "
+      
+      hl.on("hyprland.start", function()
+        hl.exec_cmd("noctalia")
+      end)
+
+      hl.bind(mainMod .. " + SPACE",      hl.dsp.exec_cmd("noctalia msg panel-toggle launcher"))
+      hl.bind(mainMod .. " + Z",          hl.dsp.exec_cmd("noctalia msg panel-toggle control-center"))
+      hl.bind(mainMod .. " + P",          hl.dsp.exec_cmd("noctalia msg panel-toggle ashur-d/wallpaper-widget:hub"))
+    '';
+
   };
 
 }

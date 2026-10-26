@@ -2,7 +2,7 @@
 ---- SHELL IPC ----
 -------------------
  --local ipc = "noctalia msg "
- local ipc = "dms ipc call"
+ --local ipc = "dms ipc call"
 
 -------------------
 ---- AUTOSTART ----
@@ -10,7 +10,7 @@
 
 hl.on("hyprland.start", function () 
 --   hl.exec_cmd("noctalia")
-   hl.exec_cmd("dms run")   
+--   hl.exec_cmd("dms run")   
 --   hl.exec_cmd("serpantinumd start")
 
    hl.exec_cmd("xrandr --output HDMI-A-2 --primary")
@@ -251,9 +251,9 @@ hl.bind(mainMod .. " + Z",          hl.dsp.exec_cmd("noctalia msg panel-toggle c
 hl.bind(mainMod .. " + P",          hl.dsp.exec_cmd("noctalia msg panel-toggle ashur-d/wallpaper-widget:hub")) ]]
 
 --DMS--
-hl.bind(mainMod .. " + SPACE",     hl.dsp.exec_cmd("dms ipc call spotlight toggle"))
-hl.bind(mainMod .. " + Z",         hl.dsp.exec_cmd("dms ipc call control-center toggle"))
-hl.bind(mainMod .. " + P",         hl.dsp.exec_cmd("dms ipc wallpaperCarousel toggle"))
+--hl.bind(mainMod .. " + SPACE",     hl.dsp.exec_cmd("dms ipc call spotlight toggle"))
+--hl.bind(mainMod .. " + Z",         hl.dsp.exec_cmd("dms ipc call control-center toggle"))
+--hl.bind(mainMod .. " + P",         hl.dsp.exec_cmd("dms ipc wallpaperCarousel toggle"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
