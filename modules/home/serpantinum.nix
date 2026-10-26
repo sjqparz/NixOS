@@ -43,6 +43,5 @@
       hl.bind("SUPER + P",         hl.dsp.exec_cmd("msg toggle wallpaper"))
     '';
 
-    };
   };
 }
