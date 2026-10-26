@@ -24,7 +24,7 @@
             right = [ "tray" [ "kb" "wifi" "bt" "vol" "bat" ] ];
           }; */
         };
-        theme.fontFamily = "JetBrainsMono Nerd Font";
+        /* theme.fontFamily = "JetBrainsMono Nerd Font"; */
       };
       
       wayland.windowManager.hyprland.extraConfig = ''
