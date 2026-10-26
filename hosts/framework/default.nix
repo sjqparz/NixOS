@@ -11,7 +11,7 @@
       #../../modules/home/noctalia.nix
       #../../modules/home/dms.nix
       ../../modules/home/serpantinum.nix
-      #../../modules/system/gamer.nix
+      ../../modules/system/tailscale.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
