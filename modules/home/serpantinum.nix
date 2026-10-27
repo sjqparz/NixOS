@@ -16,15 +16,11 @@
       settings = {
         wallpaperDir = "/home/sean/.config/nixos/modules/home/wallpaper";
         general.language = "en";
-        /* bar = {
-          position = "top";
-          modules = {
-            left = [ "workspaces" ];
-            center = [ "time" ];
-            right = [ "tray" [ "kb" "wifi" "bt" "vol" "bat" ] ];
-          }; */
+        bar = {
+          time.format = "h:mm"
+          };
         };
-        /* theme.fontFamily = "JetBrainsMono Nerd Font"; */
+        theme.fontFamily = "JetBrainsMono Nerd Font";
       };
       
       wayland.windowManager.hyprland.extraConfig = ''
