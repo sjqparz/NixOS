@@ -76,6 +76,8 @@
 home-manager.users.${username}.wayland.windowManager.hyprland.extraConfig =
     builtins.readFile ./monitor.lua;
 
+services.displayManager.defaultSession = "hyprland";
+
 system.stateVersion = "26.05"; 
 
 }
