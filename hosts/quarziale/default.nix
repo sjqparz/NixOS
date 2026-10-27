@@ -17,11 +17,13 @@
   environment.systemPackages = with pkgs; [
     alsa-utils
     cifs-utils
+    vulkan-tools
 
     sleek-grub-theme
     obsidian
     nemo
     yazi #tui file manager
+    brave
 
     
     davinci-resolve
