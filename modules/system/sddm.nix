@@ -23,8 +23,6 @@ in
       enable = true;
       user = "sean";
     };
-
-    defaultSession = "hyprland";
   };
 
   services.xserver.enable = true;

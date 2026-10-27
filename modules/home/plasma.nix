@@ -11,7 +11,6 @@
     konsole
     oxygen
     elisa
-    gwenview
     okular
     khelpcenter
     baloo
@@ -48,7 +47,7 @@
           theme = "Breeze";
         };
         splashScreen.theme = "None";
-        iconTheme = "YAMIS"; # merged in from the separate line
+        iconTheme = "Papirus-Dark"; # merged in from the separate line
       };
     };
 
@@ -59,18 +58,5 @@
         winDecStyles = [ "classic" ];
       })
     ];
-
-#    home.pointerCursor = {
-#      package = pkgs.bibata-cursors;
-#      name = "Bibata-Modern-Ice";
-#      size = 24;
-#      gtk.enable = true;
-#      x11.enable = true;
-#    };
-
-#    xdg.dataFile."icons/YAMIS".source = builtins.fetchGit {
-#      url = "https://bitbucket.org/dirn-typo/yet-another-monochrome-icon-set.git";
-#      rev = "367da5db6c03ac581e7105da071f2b961d587a2a";
-#    };
   };
 }

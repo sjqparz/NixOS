@@ -6,11 +6,10 @@
       ./hardware.nix
       ../../modules/system/home-manager.nix
       ../../modules/system/sddm.nix
-      #../../modules/home/plasma.nix
-      ../../modules/home/hyprland.nix
-      #../../modules/home/noctalia.nix
+      ../../modules/home/plasma.nix
+      #../../modules/home/hyprland.nix
       #../../modules/home/dms.nix
-      ../../modules/home/serpantinum.nix
+      #../../modules/home/serpantinum.nix
       ../../modules/system/tailscale.nix
     ];
 
@@ -21,11 +20,11 @@
     alsa-utils
     cifs-utils
 
-    sleek-grub-theme
     obsidian
-    nemo
+    vaults
 
     proton-vpn
+    zoom-us
   ];
 
   fileSystems."/mnt/truenas/obsidian" = {
@@ -38,10 +37,20 @@
 
   services.fwupd.enable = true;
 
+  services.libinput.enable= true;
+
   time.hardwareClockInLocalTime = true;
 
   networking.hostName = "framework";
   networking.wireless.enable = true;
+
+  services.pipewire.wireplumber.extraConfig."10-bluez" = {
+    "monitor.bluez.properties" = {
+    # default minus a2dp_sink: the laptop never competes with itself
+    # for the AVDTP session when the headphones expose Source + Sink
+    "bluez5.roles" = [ "a2dp_source" "bap_sink" "bap_source" "hfp_hf" "hfp_ag" ];
+    };
+  };
 
   services.printing.enable = true;
 
@@ -49,6 +58,8 @@
 
 home-manager.users.${username}.wayland.windowManager.hyprland.extraConfig =
     builtins.readFile ./monitor.lua;
+
+services.displayManager.defaultSession = "plasma";
 
 system.stateVersion = "26.05"; 
 

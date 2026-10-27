@@ -17,10 +17,9 @@
         wallpaperDir = "/home/sean/.config/nixos/modules/home/wallpaper";
         general.language = "en";
         bar = {
-          time.format = "h:mm"
+          time.format = "h:mm";
           };
         };
-        theme.fontFamily = "JetBrainsMono Nerd Font";
       };
       
       wayland.windowManager.hyprland.extraConfig = ''
