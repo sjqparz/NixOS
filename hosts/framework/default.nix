@@ -36,6 +36,7 @@
   };
 
   services.fwupd.enable = true;
+  services.fprintd.enable = true;
 
   services.libinput.enable= true;
 

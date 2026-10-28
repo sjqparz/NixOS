@@ -18,7 +18,6 @@
     pulseaudio
     vlc
     ffmpeg-full
-    qimgv
     feishin
     pywalfox-native
 

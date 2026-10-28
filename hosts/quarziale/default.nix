@@ -18,6 +18,7 @@
     alsa-utils
     cifs-utils
     vulkan-tools
+    qimgv
 
     sleek-grub-theme
     obsidian
