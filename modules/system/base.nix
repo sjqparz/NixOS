@@ -44,6 +44,13 @@
     pulse.enable = true;
   };
 
+  # Make sure the leftover PulseAudio units can never start
+  systemd.user.services.pulseaudio.enable = false;
+  systemd.user.sockets.pulseaudio.enable = false;
+
+# Clients shouldn't try to spawn a pulseaudio daemon
+environment.etc."pulse/client.conf".text = "autospawn = no\n";
+
   time.timeZone = "America/New_York";
 
   # Select internationalisation properties.
