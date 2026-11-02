@@ -178,7 +178,7 @@ environment.etc."pulse/client.conf".text = "autospawn = no\n";
         rebuild  = "sudo nixos-rebuild switch --flake /home/${username}/.config/nixos";
         build    = "sudo nixos-rebuild build --flake /home/${username}/.config/nixos";
         update   = "nix flake update --flake /home/${username}/.config/nixos";
-        trashman = "sudo nix-collect-garbage --delete-older-than 10d";
+        trashman = "nix-collect-garbage --delete-older-than 10d";
       };
 
       #IDK WTF this is, some type of zsh compltetion settings? Thanks Claude!
