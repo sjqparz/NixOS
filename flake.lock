@@ -92,11 +92,11 @@
     },
     "nixpkgs-unstable": {
       "locked": {
-        "lastModified": 1792773339,
-        "narHash": "sha256-rZLrzrC6i+jnTAlvPZHogKDulY7WWDEv9hJeHieO7Zw=",
+        "lastModified": 1793540411,
+        "narHash": "sha256-fiPJ88izTVucjeo2EQ3jk4aWmLg03I1D4vxnX2QjEgE=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "3ec636362e1816bc2f0888fa0fa2c69f1bc9e504",
+        "rev": "0bb2eedc20e4739f29e8045034f2828ad7054f8f",
         "type": "github"
       },
       "original": {
@@ -108,11 +108,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1792898606,
-        "narHash": "sha256-Mg3rRjsbMqhSMxop5PYMXos8SwAjejrxSgVThTvP9eg=",
+        "lastModified": 1793633738,
+        "narHash": "sha256-tItrb9M8eYA6WhFgmT9tpGKueri3+wRuVA952o/2xSU=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "1f607aa79b6356ed45d3cd3c8079c196e79efa2c",
+        "rev": "7dcdd87373d72e7a2173e4db02e20d3d7f495cfd",
         "type": "github"
       },
       "original": {
@@ -124,11 +124,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1792773339,
-        "narHash": "sha256-17eNBI5Khe4JZaRkL5hRGPWf8MZ6qv+bWAr4V8YeKBw=",
-        "rev": "3ec636362e1816bc2f0888fa0fa2c69f1bc9e504",
+        "lastModified": 1793341285,
+        "narHash": "sha256-LOv16TsMYV2/8BUYnhSxHkOASe7es2ORbqMeLlZJ8Hc=",
+        "rev": "1c89083e451e891152365b799595cf7790a43325",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1100280.3ec636362e18/nixexprs.tar.zst"
+        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1105037.1c89083e451e/nixexprs.tar.zst"
       },
       "original": {
         "type": "tarball",
@@ -137,11 +137,11 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 1792773339,
-        "narHash": "sha256-rZLrzrC6i+jnTAlvPZHogKDulY7WWDEv9hJeHieO7Zw=",
+        "lastModified": 1793540411,
+        "narHash": "sha256-fiPJ88izTVucjeo2EQ3jk4aWmLg03I1D4vxnX2QjEgE=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "3ec636362e1816bc2f0888fa0fa2c69f1bc9e504",
+        "rev": "0bb2eedc20e4739f29e8045034f2828ad7054f8f",
         "type": "github"
       },
       "original": {
@@ -156,11 +156,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1793024674,
-        "narHash": "sha256-XuCihFGu51wBr4GaO+RgNeP7nJ1iOZC/uss5FVtqOLI=",
+        "lastModified": 1793721010,
+        "narHash": "sha256-VrsvBmExWwzfPORD7cr+WnsnxWJQfCDJffjzv0iXArA=",
         "owner": "noctalia-dev",
         "repo": "noctalia",
-        "rev": "125a30d4f13e86200e704a013d17ac0ed88a8044",
+        "rev": "1aa92e74ac16a1424ddb2d8acaecc65b9a8974c0",
         "type": "github"
       },
       "original": {
@@ -207,14 +207,15 @@
     "serpantinum": {
       "inputs": {
         "nixpkgs": "nixpkgs_4",
-        "serpantinum-wallpapers": "serpantinum-wallpapers"
+        "serpantinum-wallpapers": "serpantinum-wallpapers",
+        "ski": "ski"
       },
       "locked": {
-        "lastModified": 1793037560,
-        "narHash": "sha256-IXwnulSUlf6ooadUCk+f0qj/LbWPdQFAiHAQ0KGyMSA=",
+        "lastModified": 1793722297,
+        "narHash": "sha256-OaxtyRPN7J7LhiVp1E4ur/ePSmlZhG40SCPiTPTY5OE=",
         "owner": "ilyamiro",
         "repo": "serpantinum",
-        "rev": "919dc7217ecd70256b014bfb598f9fabd1aa0211",
+        "rev": "bd5124478b642e201040ebdeac86c7e9a5e1e413",
         "type": "github"
       },
       "original": {
@@ -226,16 +227,32 @@
     "serpantinum-wallpapers": {
       "flake": false,
       "locked": {
-        "lastModified": 1789127588,
-        "narHash": "sha256-L3xRtDXH1ERwVIP+ztT6qn7YYh3aHpfpy1/nvyjvKIc=",
+        "lastModified": 1793124384,
+        "narHash": "sha256-ffCXeC8Yd8kltn14qwq8yIJW4LoocE/2PRma4+IY3Fw=",
         "owner": "ilyamiro",
         "repo": "shell-wallpapers",
-        "rev": "4f5994aff60403f88d3f0378e6f9c9d0a00b0289",
+        "rev": "c9baa81ce63e27582934a002f7286437db9c5708",
         "type": "github"
       },
       "original": {
         "owner": "ilyamiro",
         "repo": "shell-wallpapers",
+        "type": "github"
+      }
+    },
+    "ski": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1793656008,
+        "narHash": "sha256-dUsvqAHOTPgt4crd1OTH+bISMaLbWFt96CJB2sW2lOg=",
+        "owner": "ilyamiro",
+        "repo": "Ski",
+        "rev": "568b35531852a8a8f7d4a25b8274dfaf44c11c73",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ilyamiro",
+        "repo": "Ski",
         "type": "github"
       }
     }
