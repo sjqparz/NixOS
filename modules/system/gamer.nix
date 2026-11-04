@@ -38,6 +38,6 @@
     environment.systemPackages = with pkgs; [
         protonplus
         faugus-launcher
-        discord
+        vesktop
     ];
 }
