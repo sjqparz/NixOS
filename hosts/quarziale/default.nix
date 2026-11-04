@@ -70,11 +70,14 @@
     enable32Bit = true;
   };
 
-  networking.hostName = "quarziale";
+networking.hostName = "quarziale";
 
-  services.printing.enable = true;
+services.printing.enable = true;
 
-  hardware.alsa.enablePersistence = true;
+hardware.alsa.enablePersistence = true;
+
+#Xbox controller support
+hardware.xpadneo.enable = true;
 
 home-manager.users.${username}.wayland.windowManager.hyprland.extraConfig =
     builtins.readFile ./monitor.lua;
