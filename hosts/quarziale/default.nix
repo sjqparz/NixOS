@@ -22,11 +22,12 @@
 
     sleek-grub-theme
     obsidian
-    nemo
-    yazi #tui file manager
-    brave
-
     
+    nemo-with-extensions
+    file-roller
+    yazi #tui file manager
+    
+    brave
     davinci-resolve
     zoom-us
     proton-vpn
