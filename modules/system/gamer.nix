@@ -34,6 +34,9 @@
     };
 
     programs.gamemode.enable = true;
+    
+    #Xbox controller support
+    hardware.xpadneo.enable = true;
 
     environment.systemPackages = with pkgs; [
         protonplus

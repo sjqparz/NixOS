@@ -76,9 +76,6 @@ services.printing.enable = true;
 
 hardware.alsa.enablePersistence = true;
 
-#Xbox controller support
-hardware.xpadneo.enable = true;
-
 home-manager.users.${username}.wayland.windowManager.hyprland.extraConfig =
     builtins.readFile ./monitor.lua;
 
