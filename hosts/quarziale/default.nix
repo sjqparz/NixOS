@@ -27,7 +27,6 @@
     file-roller
     yazi #tui file manager
     
-    brave
     davinci-resolve
     zoom-us
     proton-vpn
