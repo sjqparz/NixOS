@@ -3,6 +3,8 @@
 {
   # 1. Enable the service and the firewall
   services.tailscale.enable = true;
+  services.tailscale.useRoutingFeatures = "client";
+  services.resolved.enable = true;
   networking.nftables.enable = true;
   networking.firewall = {
     enable = true;

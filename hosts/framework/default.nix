@@ -25,8 +25,6 @@
 
     proton-vpn
     zoom-us
-
-    brave
   ];
 
   fileSystems."/mnt/truenas/obsidian" = {
