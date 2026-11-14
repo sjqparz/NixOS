@@ -25,19 +25,9 @@
   # Must match the name in flake.nix so `nixos-rebuild --flake <path>` finds this host.
   networking.hostName = "vm";
 
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
   environment.systemPackages = with pkgs; [
     kdePackages.kate
     sleek-grub-theme
-    #obsidian
-    #yazi #tui file manager
-    
-    #davinci-resolve
-    #zoom-us
-    #proton-vpn
-    #orca-slicer
   ];
 
   home-manager.users.${username}.wayland.windowManager.hyprland.extraConfig =

@@ -31,7 +31,6 @@
     let
 
       username = "sean";
-      #system = "x86_64-linux";
 
       mkHost = hostname: nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs username hostname; };
