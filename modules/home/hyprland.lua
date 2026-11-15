@@ -13,7 +13,7 @@ hl.on("hyprland.start", function ()
 --   hl.exec_cmd("dms run")   
 --   hl.exec_cmd("serpantinumd start")
 
-   hl.exec_cmd("xrandr --output HDMI-A-2 --primary")
+--   hl.exec_cmd("xrandr --output HDMI-A-2 --primary")
    hl.exec_cmd("hyprctl setcursor Bibata-Modern-Ice 24")
 end)
 
