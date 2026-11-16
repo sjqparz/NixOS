@@ -25,7 +25,6 @@
     
     nemo-with-extensions
     file-roller
-    yazi #tui file manager
     
     davinci-resolve
     zoom-us
@@ -33,15 +32,36 @@
     orca-slicer
   ];
 
+  fileSystems."/mnt/truenas/dump" = {
+    device = "//42.0.69.27/dump";
+    fsType = "cifs";
+    options = [
+      "credentials=/home/sean/.smb/truenas-smb-creds"
+      "uid=1000"
+      "gid=1000"                       
+      "x-systemd.automount"
+      "noauto"
+      "_netdev"
+      "x-systemd.device-timeout=5s"
+      "x-systemd.mount-timeout=5s"
+    ];
+  };
+
   fileSystems."/mnt/truenas/obsidian" = {
     device = "//42.0.69.27/obsidian";
     fsType = "cifs";
-    options = let 
-      automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
-    in ["${automount_opts},credentials=/home/sean/.smb/truenas-smb-creds,uid=1000,gid=1000"];
+    options = [
+      "credentials=/home/sean/.smb/truenas-smb-creds"
+      "uid=1000"
+      "gid=1000"                       
+      "x-systemd.automount"
+      "noauto"
+      "_netdev"
+      "x-systemd.device-timeout=5s"
+      "x-systemd.mount-timeout=5s"
+    ];
   };
 
-  # Bootloader
   boot.loader.systemd-boot.enable = false;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub = {
@@ -70,17 +90,16 @@
     enable32Bit = true;
   };
 
-networking.hostName = "quarziale";
+  networking.hostName = "quarziale";
 
-services.printing.enable = true;
+  services.printing.enable = true;
 
-hardware.alsa.enablePersistence = true;
+  hardware.alsa.enablePersistence = true;
 
-home-manager.users.${username}.wayland.windowManager.hyprland.extraConfig =
+  home-manager.users.${username}.wayland.windowManager.hyprland.extraConfig =
     builtins.readFile ./monitor.lua;
 
 services.displayManager.defaultSession = "hyprland";
-
 system.stateVersion = "26.05"; 
 
 }
