@@ -30,6 +30,8 @@
     zoom-us
     proton-vpn
     orca-slicer
+
+    #ungoogled-chromium
   ];
 
   fileSystems."/mnt/truenas/dump" = {
@@ -99,7 +101,8 @@
   home-manager.users.${username}.wayland.windowManager.hyprland.extraConfig =
     builtins.readFile ./monitor.lua;
 
-services.displayManager.defaultSession = "hyprland";
+  services.displayManager.defaultSession = "hyprland";
+  
 system.stateVersion = "26.05"; 
 
 }
